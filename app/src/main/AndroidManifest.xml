@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.azhong.smackchat">
+    package="com.blt.setiment">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -9,10 +9,10 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="柒采舆情"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".founction.user.activity.LoginActivity">
+        <activity android:name="com.blt.setiment.founction.user.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,19 +20,19 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service.ConnectionService" />
+        <service android:name="com.blt.setiment.service.ConnectionService" />
 
-        <activity android:name=".founction.main.activity.MainActivity" />
+        <activity android:name="com.blt.setiment.founction.main.activity.MainActivity" />
         <activity
-            android:name=".common.base.BaseActivity"
+            android:name="com.blt.setiment.common.base.BaseActivity"
             android:label="基类" />
-        <activity android:name=".founction.chat.activity.ChatActivity" />
-        <activity android:name=".founction.user.activity.RegisterActivity" />
-        <activity android:name=".founction.group.activity.JoinGroupActivity" />
-        <activity android:name=".founction.group.activity.CreateGroupActivity" />
-        <activity android:name=".founction.group.activity.GroupListActivity" />
-        <activity android:name=".founction.group.activity.GroupChatActivity" />
-        <activity android:name=".founction.group.activity.UserListActivity"></activity>
+        <activity android:name="com.blt.setiment.founction.chat.activity.ChatActivity" />
+        <activity android:name="com.blt.setiment.founction.user.activity.RegisterActivity" />
+        <activity android:name="com.blt.setiment.founction.group.activity.JoinGroupActivity" />
+        <activity android:name="com.blt.setiment.founction.group.activity.CreateGroupActivity" />
+        <activity android:name="com.blt.setiment.founction.group.activity.GroupListActivity" />
+        <activity android:name="com.blt.setiment.founction.group.activity.GroupChatActivity" />
+        <activity android:name="com.blt.setiment.founction.group.activity.UserListActivity"></activity>
     </application>
 
 </manifest>

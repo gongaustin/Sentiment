@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#EBEEF3"
     android:orientation="vertical"
-    tools:context="com.azhong.smackchat.founction.chat.activity.ChatActivity">
+    tools:context="com.blt.setiment.founction.chat.activity.ChatActivity">
 
     <include layout="@layout/toolbar" />
 
@@ -22,7 +22,7 @@
         android:background="#F0F0F0"
         android:orientation="horizontal">
 
-        <com.azhong.smackchat.founction.ui.EmoticonsEditText
+        <com.blt.setiment.founction.ui.EmoticonsEditText
             android:id="@+id/content"
             android:layout_width="0dp"
             android:layout_height="match_parent"
