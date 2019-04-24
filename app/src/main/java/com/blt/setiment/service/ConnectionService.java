@@ -52,7 +52,7 @@ import java.util.Map;
  */
 public class ConnectionService extends Service {
 
-    public static final String SERVER_NAME = "121.40.195.164";//主机名
+    public static final String SERVER_NAME = "openfire";//主机名
     public static final String SERVER_IP = "121.40.195.164";//ip
     public static final int PORT = 5222;//端口
     private XMPPTCPConnection connection;
@@ -113,7 +113,9 @@ public class ConnectionService extends Service {
                         //是否开启压缩
                         .setCompressionEnabled(false)
                         //开启调试模式
-                        .setDebuggerEnabled(true).build();
+                        .setDebuggerEnabled(true)
+                        .build();
+
                 connection = new XMPPTCPConnection(config);
                 connection.connect();
             }
@@ -137,15 +139,16 @@ public class ConnectionService extends Service {
                 //当消息返回为空的时候，表示用户正在聊天窗口编辑信息并未发出消息
                 if (!TextUtils.isEmpty(message.getBody())) {
                     try {
-                        JSONObject object = new JSONObject(message.getBody());
-                        String type = object.getString("type");
-                        String data = object.getString("data");
+                        String s = message.getBody();
+//                        JSONObject object = new JSONObject(message.getBody());
+//                        String type = object.getString("type");
+                        String data = message.getBody();
                         LogUtil.d("TAG", data);
                         message.setFrom(message.getFrom().split("/")[0]);
                         message.setBody(data);
                         dbHelper.insertOneMsg(user.getUser_id(), message.getFrom(), data, System.currentTimeMillis() + "", message.getFrom(), 2);
                         RxBus.getInstance().post(message);
-                    } catch (JSONException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -220,9 +223,9 @@ public class ConnectionService extends Service {
             List<Message> list = offlineManager.getMessages();
             for (Message message : list) {
                 message.setFrom(message.getFrom().split("/")[0]);
-                JSONObject object = new JSONObject(message.getBody());
-                String type = object.getString("type");
-                String data = object.getString("data");
+//                JSONObject object = new JSONObject(message.getBody());
+//                String type = object.getString("type");
+                String data = message.getBody();
                 //保存离线信息
                 dbHelper.insertOneMsg(user.getUser_id(), message.getFrom(), data, System.currentTimeMillis() + "", message.getFrom(), 2);
             }

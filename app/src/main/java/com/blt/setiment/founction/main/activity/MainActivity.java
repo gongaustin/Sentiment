@@ -154,7 +154,7 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
                 startActivity(intent2);
                 break;
             case R.id.add_friend:
-                service.addFriend("yuhengfeng", "", null);
+                service.addFriend("jcz", "", null);
                 break;
             default:
                 break;
@@ -169,7 +169,7 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
             service = binder.getService();
             connection = service.getConnection();
             //添加好友申请监听
-            service.requestListener();
+//            service.requestListener();
             //添加聊天室邀请监听
             setGroupInviteListener();
             mUser = service.GetUser();

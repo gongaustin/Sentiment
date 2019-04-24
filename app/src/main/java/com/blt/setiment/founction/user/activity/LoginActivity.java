@@ -134,6 +134,17 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             subscribe.unsubscribe();
         }
         super.onDestroy();
-
+//        unbindService(new ServiceConnection() {
+//            @Override
+//            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+//                ConnectionService.LocalBinder binder = (ConnectionService.LocalBinder) iBinder;
+//                service = binder.getService();
+//            }
+//
+//            @Override
+//            public void onServiceDisconnected(ComponentName name) {
+//
+//            }
+//        });
     }
 }
