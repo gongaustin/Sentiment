@@ -162,7 +162,7 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
         return super.onOptionsItemSelected(item);
     }
 
-    private ServiceConnection serviceConnection = new ServiceConnection() {
+    private ServiceConnection conn = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder iBinder) {
             ConnectionService.LocalBinder binder = (ConnectionService.LocalBinder) iBinder;
@@ -187,7 +187,7 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
     public void bindService() {
         //开启服务获得与服务器的连接
         Intent intent = new Intent(this, ConnectionService.class);
-        bindService(intent, serviceConnection, BIND_AUTO_CREATE);
+        bindService(intent, conn, BIND_AUTO_CREATE);
         startService(intent);
         RequestListener();
     }
@@ -321,7 +321,7 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
             subscription.unsubscribe();
         }
         super.onDestroy();
-        unbindService(serviceConnection);
+        unbindService(conn);
     }
 
 
