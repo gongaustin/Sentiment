@@ -13,6 +13,7 @@ import com.blt.sentiment.common.db.bean.User;
 import com.blt.sentiment.common.rxbus.RxBus;
 import com.blt.sentiment.common.rxbus.event.FriendListenerEvent;
 import com.blt.sentiment.common.rxbus.event.HandleEvent;
+import com.blt.sentiment.common.utils.ConstantUtil;
 import com.blt.sentiment.common.utils.LogUtil;
 import com.blt.sentiment.founction.user.bean.UserBean;
 
@@ -50,9 +51,9 @@ import java.util.Map;
  */
 public class ConnectionService extends Service {
 
-    public static final String SERVER_NAME = "openfire";//主机名
-    public static final String SERVER_IP = "121.40.195.164";//ip
-    public static final int PORT = 5222;//端口
+    public static final String SERVER_NAME = ConstantUtil.OPENFIRE_SERVER_NAME;//主机名
+    public static final String SERVER_IP = ConstantUtil.OPENFIRE_SERVER_IP;//ip
+    public static final int PORT = ConstantUtil.OPENFIRE_SERVER_PORT;//端口
     private XMPPTCPConnection connection;
     private DbHelper dbHelper;
     private User user;//用户信息
@@ -199,7 +200,7 @@ public class ConnectionService extends Service {
                 }
                 try {
                     ConnectionService.this.connection.login(userName, password);//登录
-                    user = dbHelper.SetUser(userName + "@106.14.20.176", password);//插入数据库
+                    user = dbHelper.SetUser(userName + "@"+SERVER_IP, password);//插入数据库
                     getOfflineMessage();//一上线获取离线消息
                     initListener();//登录成功开启消息监听
                     RxBus.getInstance().post(new HandleEvent("LoginActivity", true));

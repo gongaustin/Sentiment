@@ -172,7 +172,7 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener, 
         try {
             ChatManager manager = ChatManager.getInstanceFor(xmpptcpConnection);
             //得到与另一个帐号的连接，这里是一对
-            //格式为azhon@106.14.20.176;服务器ip
+            //格式为xxx@106.14.20.176;服务器ip
             Chat chat = manager.createChat(to_name, null);
             chat.sendMessage(json);
             helper.insertOneMsg(user.getUser_id(), to_name, msg, System.currentTimeMillis() + "", user.getUser_name(), 1);
