@@ -105,9 +105,10 @@ public class GroupChatActivity extends BaseActivity implements View.OnClickListe
                 //当消息返回为空的时候，表示用户正在聊天窗口编辑信息并未发出消息
                 if (!TextUtils.isEmpty(message.getBody())) {
                     try {
-                        JSONObject object = new JSONObject(message.getBody());
-                        String type = object.getString("type");
-                        String data = object.getString("data");
+//                        JSONObject object = new JSONObject(message.getBody());
+//                        String type = object.getString("type");
+//                        String data = object.getString("data");
+                        String data = message.getBody();
                         message.setFrom(message.getFrom().split("/")[0]);
                         message.setBody(data);
                         if (flag) {
@@ -127,7 +128,7 @@ public class GroupChatActivity extends BaseActivity implements View.OnClickListe
                             }
                         });
 
-                    } catch (JSONException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -141,27 +142,29 @@ public class GroupChatActivity extends BaseActivity implements View.OnClickListe
         });
     }
 
+    private ServiceConnection conn = new ServiceConnection(){
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            ConnectionService.LocalBinder binder = (ConnectionService.LocalBinder) service;
+            iConnection = binder.getService();
+            connection = iConnection.getConnection();
+            user = iConnection.GetUser();
+            getMsg();
+            multiUserChat = MultiUserChatManager.getInstanceFor(connection).
+                    getMultiUserChat(jid);
+            initListener();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+        }
+    };
+
     private void bindService() {
         //开启服务获得与服务器的连接
         Intent intent = new Intent(this, ConnectionService.class);
-        bindService(intent, new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder service) {
-                ConnectionService.LocalBinder binder = (ConnectionService.LocalBinder) service;
-                iConnection = binder.getService();
-                connection = iConnection.getConnection();
-                user = iConnection.GetUser();
-                getMsg();
-                multiUserChat = MultiUserChatManager.getInstanceFor(connection).
-                        getMultiUserChat(jid);
-                initListener();
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-
-            }
-        }, BIND_AUTO_CREATE);
+        bindService(intent,conn, BIND_AUTO_CREATE);
     }
 
     @Override
@@ -297,5 +300,11 @@ public class GroupChatActivity extends BaseActivity implements View.OnClickListe
                 break;
         }
         return false;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbindService(conn);
     }
 }

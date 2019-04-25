@@ -211,24 +211,32 @@ public class GroupListActivity extends BaseActivity {
         }
     }
 
+    private ServiceConnection conn = new ServiceConnection(){
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            ConnectionService.LocalBinder binder = (ConnectionService.LocalBinder) service;
+            iConnection = binder.getService();
+            connection = iConnection.getConnection();
+            mUser = iConnection.GetUser();
+            getData();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+        }
+    };
+
 
     private void bindService() {
         //开启服务获得与服务器的连接
         Intent intent = new Intent(this, ConnectionService.class);
-        bindService(intent, new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder service) {
-                ConnectionService.LocalBinder binder = (ConnectionService.LocalBinder) service;
-                iConnection = binder.getService();
-                connection = iConnection.getConnection();
-                mUser = iConnection.GetUser();
-                getData();
-            }
+        bindService(intent,conn, BIND_AUTO_CREATE);
+    }
 
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-
-            }
-        }, BIND_AUTO_CREATE);
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbindService(conn);
     }
 }

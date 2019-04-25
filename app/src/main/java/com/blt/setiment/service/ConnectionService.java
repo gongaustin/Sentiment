@@ -339,7 +339,7 @@ public class ConnectionService extends Service {
         } catch (SmackException.NotConnectedException e) {
             e.printStackTrace();
         }
-    }
+    }   
 
     /**
      * 接收好友申请
