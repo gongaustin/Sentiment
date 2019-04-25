@@ -1,4 +1,4 @@
-# SmackChat
+# Sentiment
 一个基于Smack、Openfire开发的即时通讯应用
 ### 博客介绍
  1. [基于Openfire Smack开发即时通讯应用、搭建Openfire服务器(一)](http://blog.csdn.net/a_zhon/article/details/60871706)

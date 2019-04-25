@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.blt.setiment.founction.group.activity.UserListActivity">
+    tools:context="com.blt.sentiment.founction.group.activity.UserListActivity">
 
     <include layout="@layout/toolbar" />
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.blt.setiment.founction.group.activity.GroupChatActivity">
+    tools:context="com.blt.sentiment.founction.group.activity.GroupChatActivity">
 
 
     <include layout="@layout/toolbar" />
@@ -23,7 +23,7 @@
         android:background="#F0F0F0"
         android:orientation="horizontal">
 
-        <com.blt.setiment.founction.ui.EmoticonsEditText
+        <com.blt.sentiment.founction.ui.EmoticonsEditText
             android:id="@+id/edt_content"
             android:layout_width="0dp"
             android:layout_height="match_parent"
