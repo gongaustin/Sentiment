@@ -104,11 +104,15 @@ public class GroupChatActivity extends BaseActivity implements View.OnClickListe
             public void processMessage(final Message message) {
                 //当消息返回为空的时候，表示用户正在聊天窗口编辑信息并未发出消息
                 if (!TextUtils.isEmpty(message.getBody())) {
+                    String type = "text";
+                    String data = "";
                     try {
-//                        JSONObject object = new JSONObject(message.getBody());
-//                        String type = object.getString("type");
-//                        String data = object.getString("data");
-                        String data = message.getBody();
+                        JSONObject object = new JSONObject(message.getBody());
+                        data = object.getString("data");
+                        type = object.getString("type");
+                    } catch (JSONException e) {
+                        data = message.getBody();
+                    }
                         message.setFrom(message.getFrom().split("/")[0]);
                         message.setBody(data);
                         if (flag) {
@@ -128,9 +132,7 @@ public class GroupChatActivity extends BaseActivity implements View.OnClickListe
                             }
                         });
 
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+
                 }
             }
         });
