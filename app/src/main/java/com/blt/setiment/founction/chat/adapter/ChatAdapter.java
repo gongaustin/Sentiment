@@ -17,10 +17,10 @@ import butterknife.ButterKnife;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.adapter
+ * 包名       com.blt.setiment.adapter
  * 文件名:    ChatAdapter
- * 创建者:    ZSY
- * 创建时间:  2017/3/3 on 9:19
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/24 on 9:19
  * 描述:     TODO 聊天适配器
  */
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {

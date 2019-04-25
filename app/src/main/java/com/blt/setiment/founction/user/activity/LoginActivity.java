@@ -28,10 +28,10 @@ import rx.functions.Action1;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.activity
+ * 包名       com.blt.setiment.activity
  * 文件名:    LoginActivity
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 08:58
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 08:58
  * 描述:     TODO 登录页面
  */
 public class LoginActivity extends BaseActivity implements View.OnClickListener {

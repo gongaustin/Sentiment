@@ -2,10 +2,10 @@ package com.blt.setiment.common.rxbus.event;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.common.rxbus.event
+ * 包名       com.blt.setiment.common.rxbus.event
  * 文件名:    HandleEvent
  * 创建者:    ZJB
- * 创建时间:  2017/3/6 on 11:44
+ * 创建时间:  2019/4/25 on 11:44
  * 描述:     TODO 操作类消息
  */
 public class HandleEvent {

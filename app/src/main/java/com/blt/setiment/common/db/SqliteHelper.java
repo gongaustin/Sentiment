@@ -7,10 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.common.db
+ * 包名       com.blt.setiment.common.db
  * 文件名:    SqliteHelper
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 16:02
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 16:02
  * 描述:     TODO 创建数据库
  */
 public class SqliteHelper extends SQLiteOpenHelper {

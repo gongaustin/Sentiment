@@ -2,10 +2,10 @@ package com.blt.setiment.common.rxbus.event;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.common.rxbus.event
+ * 包名       com.blt.setiment.common.rxbus.event
  * 文件名:    FriendListenerEvent
  * 创建者:    YHF
- * 创建时间:  2017/3/6 on 17:23
+ * 创建时间:  2019/4/25 on 17:23
  * 描述:     TODO
  */
 public class FriendListenerEvent {

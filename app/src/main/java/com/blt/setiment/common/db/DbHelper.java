@@ -15,10 +15,10 @@ import java.util.List;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.common.db
+ * 包名       com.blt.setiment.common.db
  * 文件名:    DbHelper
  * 创建者:    ZJB
- * 创建时间:  2017/3/6 on 16:03
+ * 创建时间:  2019/4/25 on 16:03
  * 描述:     TODO
  */
 public class DbHelper {

@@ -6,10 +6,10 @@ import java.util.List;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat
+ * 包名       com.blt.setiment
  * 文件名:    UserBean
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 11:53
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 11:53
  * 描述:     TODO 联系人实体类
  */
 public class UserBean {

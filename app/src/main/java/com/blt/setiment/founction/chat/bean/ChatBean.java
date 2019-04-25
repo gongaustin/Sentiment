@@ -3,10 +3,10 @@ package com.blt.setiment.founction.chat.bean;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat
+ * 包名       com.blt.setiment
  * 文件名:    ChatBean
- * 创建者:    ZSY
- * 创建时间:  2017/3/3 on 10:24
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/24 on 10:24
  * 描述:     TODO 聊天消息实体类
  */
 public class ChatBean {

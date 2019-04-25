@@ -2,10 +2,10 @@ package com.blt.setiment.common.db.bean;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.common.db.bean
+ * 包名       com.blt.setiment.common.db.bean
  * 文件名:    User
  * 创建者:    ZJB
- * 创建时间:  2017/3/6 on 15:55
+ * 创建时间:  2019/4/25 on 15:55
  * 描述:     TODO 用户表对应的bean
  */
 public class User {

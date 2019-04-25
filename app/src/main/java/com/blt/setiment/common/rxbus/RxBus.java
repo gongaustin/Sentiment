@@ -7,10 +7,10 @@ import rx.subjects.Subject;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.common.rxbus
+ * 包名       com.blt.setiment.common.rxbus
  * 文件名:    RxBus
  * 创建者:    ZJB
- * 创建时间:  2017/3/6 on 11:43
+ * 创建时间:  2019/4/25 on 11:43
  * 描述:     TODO
  */
 public class RxBus {

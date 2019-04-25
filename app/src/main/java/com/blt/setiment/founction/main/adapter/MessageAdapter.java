@@ -15,10 +15,10 @@ import java.util.List;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.adapter
+ * 包名       com.blt.setiment.adapter
  * 文件名:    MessageAdapter
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 15:21
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 15:21
  * 描述:     TODO 消息适配器
  */
 public class MessageAdapter extends BaseAdapter {

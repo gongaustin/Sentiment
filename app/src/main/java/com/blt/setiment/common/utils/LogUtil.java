@@ -4,7 +4,7 @@ import android.util.Log;
 
 /*
  * 文件名:     LogUtil
- * 创建者:     ZSY
+ * 创建者:     AustinGJ
  * 创建时间:   2016/10/22 20:21
  * 描述:       输出Log的工具类
  */

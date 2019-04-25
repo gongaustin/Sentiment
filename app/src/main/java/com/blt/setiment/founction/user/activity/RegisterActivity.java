@@ -23,10 +23,10 @@ import butterknife.ButterKnife;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.activity
+ * 包名       com.blt.setiment.activity
  * 文件名:    RegisterActivity
- * 创建者:    ZSY
- * 创建时间:  2017/3/6 on 13:37
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/25 on 13:37
  * 描述:     TODO 注册
  */
 public class RegisterActivity extends BaseActivity implements View.OnClickListener {

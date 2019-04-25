@@ -49,10 +49,10 @@ import rx.functions.Action1;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.activity
+ * 包名       com.blt.setiment.activity
  * 文件名:    ChatActivity
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 18:00
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 18:00
  * 描述:     TODO 聊天界面
  */
 public class ChatActivity extends BaseActivity implements View.OnClickListener, View.OnTouchListener {

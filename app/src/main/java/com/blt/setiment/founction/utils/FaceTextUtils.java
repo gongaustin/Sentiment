@@ -15,10 +15,10 @@ import java.util.regex.Pattern;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.founction.utils
+ * 包名       com.blt.setiment.founction.utils
  * 文件名:    FaceTextUtils
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 08:58
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 08:58
  * 描述:     TODO 表情工具类
  */
 public class FaceTextUtils {

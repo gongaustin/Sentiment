@@ -31,10 +31,10 @@ import butterknife.ButterKnife;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.founction.group.activity
+ * 包名       com.blt.setiment.founction.group.activity
  * 文件名:    UserListActivity
  * 创建者:    CYS
- * 创建时间:  2017/3/13 0013 on 14:18
+ * 创建时间:  2019/4/13 0013 on 14:18
  * 描述:      聊天室邀请好友   好友列表界面
  */
 public class UserListActivity extends BaseActivity implements View.OnClickListener {

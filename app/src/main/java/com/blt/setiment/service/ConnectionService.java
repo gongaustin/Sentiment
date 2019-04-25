@@ -44,10 +44,10 @@ import java.util.Map;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat
+ * 包名       com.blt.setiment
  * 文件名:    ConnectionService
- * 创建者:    ZSY
- * 创建时间:  2017/3/1 on 13:49
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/1 on 13:49
  * 描述:     TODO 获得连接
  */
 public class ConnectionService extends Service {

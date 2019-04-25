@@ -15,10 +15,10 @@ import java.util.List;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.adapter
+ * 包名       com.blt.setiment.adapter
  * 文件名:    ContactAdapter
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 11:50
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 11:50
  * 描述:     TODO 联系人分组适配器
  */
 public class ContactAdapter extends BaseExpandableListAdapter {

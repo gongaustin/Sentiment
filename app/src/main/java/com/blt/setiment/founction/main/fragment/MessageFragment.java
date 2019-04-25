@@ -37,10 +37,10 @@ import static android.content.Context.BIND_AUTO_CREATE;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.founction.main.fragment
+ * 包名       com.blt.setiment.founction.main.fragment
  * 文件名:    MessageFragment
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 10:22
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 10:22
  * 描述:     TODO 消息页面
  */
 public class MessageFragment extends Fragment implements AdapterView.OnItemClickListener {

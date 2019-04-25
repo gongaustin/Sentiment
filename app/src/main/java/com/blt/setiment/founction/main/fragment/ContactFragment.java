@@ -31,10 +31,10 @@ import static android.content.Context.BIND_AUTO_CREATE;
 
 /*
  * 项目名:    SmackChat
- * 包名       com.blt.smackchat.founction.main.fragment
+ * 包名       com.blt.setiment.founction.main.fragment
  * 文件名:    ContactFragment
- * 创建者:    ZSY
- * 创建时间:  2017/3/2 on 10:23
+ * 创建者:    AustinGJ
+ * 创建时间:  2019/4/23 on 10:23
  * 描述:     TODO
  */
 public class ContactFragment extends Fragment {
